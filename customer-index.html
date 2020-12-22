@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,user-scalable=0,minimal-ui"
+    />
+    <title>Service DashBoard</title>
+    <meta content="Admin Dashboard" name="description" />
+    <meta content="ThemeDesign" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App Icons -->
+    <!--  <link rel="shortcut icon" href="assets/images/favicon.ico" /> -->
+    <!-- morris css -->
+    <link rel="stylesheet" href="assets/css/morris.css" />
+    <!-- App css -->
+    <link
+      href="assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!-- Loader -->
+    <div id="preloader">
+      <div id="status">
+        <div class="spinner">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="rect5"></div>
+        </div>
+      </div>
+    </div>
+    <div class="header-bg">
+      <!-- Navigation Bar-->
+      <header id="topnav">
+        <div class="topbar-main">
+          <div class="container-fluid">
+            <!-- Logo-->
+            <div>
+              <a href="index.html" class="logo"
+                ><img src="assets/images/logo.png" alt="" height="26"
+              /></a>
+            </div>
+            <!-- End Logo-->
+            <div class="menu-extras topbar-custom navbar p-0">
+              <ul class="list-inline d-none d-lg-block mb-0">
+                <li class="list-inline-item dropdown notification-list">
+                  <a
+                    class="nav-link dropdown-toggle arrow-none waves-effect"
+                    data-toggle="dropdown"
+                    href="#"
+                    role="button"
+                    aria-haspopup="false"
+                    aria-expanded="false"
+                    >Create New <i class="mdi mdi-plus"></i
+                  ></a>
+                  <!-- <div class="dropdown-menu dropdown-menu-animated">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                  </div> -->
+                </li>
+                <!--  <li class="list-inline-item notification-list">
+                  <a href="#" class="nav-link waves-effect">Activity</a>
+                </li> -->
+              </ul>
+              <!-- Search input -->
+              <!-- <div class="search-wrap" id="search-wrap">
+                <div class="search-bar">
+                  <input
+                    class="search-input"
+                    type="search"
+                    placeholder="Search"
+                  />
+                  <a
+                    href="#"
+                    class="close-search toggle-search"
+                    data-target="#search-wrap"
+                    ><i class="mdi mdi-close-circle"></i
+                  ></a>
+                </div>
+              </div> -->
+              <ul class="list-inline ml-auto mb-0">
+                <!-- notification-->
+      
+                <li class="list-inline-item dropdown notification-list">
+                  <a
+                    class="nav-link dropdown-toggle arrow-none waves-effect"
+                    data-toggle="dropdown"
+                    href="#"
+                    role="button"
+                    aria-haspopup="false"
+                    aria-expanded="false"
+                    ><i class="mdi mdi-bell-outline noti-icon"></i>
+                    <span class="badge badge-pill noti-icon-badge">3</span></a
+                  >
+                  <div
+                    class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-menu-lg dropdown-menu-animated"
+                  >
+                    <!-- item-->
+                    <div class="dropdown-item noti-title">
+                      <h5>Notification (3)</h5>
+                    </div>
+                    <div class="slimscroll-noti">
+                      <!-- item-->
+                      <a
+                        href="javascript:void(0);"
+                        class="dropdown-item notify-item active"
+                        ><div class="notify-icon bg-success">
+                          <i class="mdi mdi-cart-outline"></i>
+                        </div>
+                        <p class="notify-details">
+                          <b>Your order is placed</b
+                          ><span class="text-muted"
+                            >Dummy text of the printing and typesetting
+                            industry.</span
+                          >
+                        </p></a
+                      ><!-- item-->
+                      <a
+                        href="javascript:void(0);"
+                        class="dropdown-item notify-item"
+                        ><div class="notify-icon bg-danger">
+                          <i class="mdi mdi-message-text-outline"></i>
+                        </div>
+                        <p class="notify-details">
+                          <b>New Message received</b
+                          ><span class="text-muted"
+                            >You have 87 unread messages</span
+                          >
+                        </p></a
+                      ><!-- item-->
+                      <a
+                        href="javascript:void(0);"
+                        class="dropdown-item notify-item"
+                        ><div class="notify-icon bg-info">
+                          <i class="mdi mdi-filter-outline"></i>
+                        </div>
+                        <p class="notify-details">
+                          <b>Your item is shipped</b
+                          ><span class="text-muted"
+                            >It is a long established fact that a reader
+                            will</span
+                          >
+                        </p></a
+                      ><!-- item-->
+                      <a
+                        href="javascript:void(0);"
+                        class="dropdown-item notify-item"
+                        ><div class="notify-icon bg-success">
+                          <i class="mdi mdi-message-text-outline"></i>
+                        </div>
+                        <p class="notify-details">
+                          <b>New Message received</b
+                          ><span class="text-muted"
+                            >You have 87 unread messages</span
+                          >
+                        </p></a
+                      ><!-- item-->
+                      <a
+                        href="javascript:void(0);"
+                        class="dropdown-item notify-item"
+                        ><div class="notify-icon bg-warning">
+                          <i class="mdi mdi-cart-outline"></i>
+                        </div>
+                        <p class="notify-details">
+                          <b>Your order is placed</b
+                          ><span class="text-muted"
+                            >Dummy text of the printing and typesetting
+                            industry.</span
+                          >
+                        </p></a
+                      >
+                    </div>
+                    <!-- All-->
+                    <a
+                      href="javascript:void(0);"
+                      class="dropdown-item notify-all"
+                      >View All</a
+                    >
+                  </div>
+                </li>
+                <!-- User-->
+                <li
+                  class="list-inline-item dropdown notification-list nav-user"
+                >
+                  <a
+                    class="nav-link dropdown-toggle arrow-none waves-effect"
+                    data-toggle="dropdown"
+                    href="#"
+                    role="button"
+                    aria-haspopup="false"
+                    aria-expanded="false"
+                    ><!-- <img
+                      src="assets/images/users/avatar-6.jpg"
+                      alt="user"
+                      class="rounded-circle" /> -->
+                    <span class="d-none d-md-inline-block ml-1"
+                      >David M. Bailey
+                      <i class="mdi mdi-chevron-down"></i></span
+                  ></a>
+                  <div
+                    class="dropdown-menu dropdown-menu-right dropdown-menu-animated profile-dropdown"
+                  >
+                    <a class="dropdown-item" href="#"
+                      ><i class="dripicons-user text-muted"></i> Profile</a
+                    >
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#"
+                      ><i class="dripicons-exit text-muted"></i> Logout</a
+                    >
+                  </div>
+                </li>
+                <li class="menu-item list-inline-item">
+                  <!-- Mobile menu toggle-->
+                  <a class="navbar-toggle nav-link"
+                    ><div class="lines">
+                      <span></span> <span></span> <span></span></div></a
+                  ><!-- End mobile menu toggle-->
+                </li>
+              </ul>
+            </div>
+            <!-- end menu-extras -->
+            <div class="clearfix"></div>
+          </div>
+          <!-- end container -->
+        </div>
+        <!-- end topbar-main --><!-- MENU Start -->
+        <div class="navbar-custom">
+          <div class="container-fluid">
+            <div id="navigation">
+              <!-- Navigation Menu-->
+              <ul class="navigation-menu">
+                <li class="has-submenu">
+                  <a href="index.html"><i class="dripicons-home"></i> Home</a>
+                </li>
+              </ul>
+              <!-- End navigation menu -->
+            </div>
+            <!-- end #navigation -->
+          </div>
+          <!-- end container -->
+        </div>
+        <!-- end navbar-custom -->
+      </header>
+      <!-- End Navigation Bar-->
+    </div>
+    <!-- header-bg -->
+    <div class="wrapper">
+      <div class="container-fluid">
+        <!-- Page-Title -->
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="page-title-box">
+              <div class="row align-items-center">
+                <div class="col-md-8">
+                  <h4 class="page-title m-0"> Customer Dashboard</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end page title end breadcrumb -->
+        <div class="row">
+          <div class="col-xl-9">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="mt-0 header-title mb-4">Pending Requests</h4>
+                <div class="table-responsive">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID No.</th>
+                        <th scope="col">Brand & Model Number</th>
+                        <th scope="col">Requested Date</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">View Detail</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">#14567</th>
+                        <td>Dell Inspiron 14 - 543332323</td>
+                        <td>14 Jan</td>
+                        <td>
+                          <div class="progress" style="height: 5px">
+                            <div
+                              class="progress-bar bg-danger"
+                              role="progressbar"
+                              style="width: 89%"
+                              aria-valuenow="89"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                          In-Progress
+                        </td>
+                        <td><button type="button" class="btn btn-primary waves-effect waves-light">View Status</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end row -->
+        <div class="row">
+          <div class="col-xl-9">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="mt-0 header-title mb-4">Pending Requests</h4>
+                <div class="table-responsive">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID No.</th>
+                        <th scope="col">Brand & Model Number</th>
+                        <th scope="col">Requested Date</th>
+                        <!--  <th scope="col">Price</th> -->
+                        <!--  <th scope="col">Quantity</th> -->
+                        <th scope="col">Status</th>
+                        <th scope="col">View Details</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">#14567</th>
+                        <td>Dell Inspiron 14 - 543332323</td>
+                        <td>14 Jan</td>
+                        <!-- <td>$74</td> -->
+                        <!--  <td>2</td> -->
+                        <td>
+                          <div class="progress" style="height: 5px">
+                            <div
+                              class="progress-bar bg-success"
+                              role="progressbar"
+                              style="width: 100%"
+                              aria-valuenow="100"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div> 
+                          </div>
+                          Completed
+                        </td>
+                        <td><button type="button" class="btn btn-primary waves-effect waves-light">View Status</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container-fluid -->
+    </div>
+    <!-- end wrapper --><!-- Footer -->
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            © 2020 Service Dashboard
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer --><!-- jQuery  -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/modernizr.min.js"></script>
+    <script src="assets/js/waves.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <!--Morris Chart-->
+    <script src="assets/js/morris.min.js"></script>
+    <script src="assets/js/raphael.min.js"></script>
+    <!-- dashboard js -->
+    <script src="assets/js/dashboard.int.js"></script>
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
