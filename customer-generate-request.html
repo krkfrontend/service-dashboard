@@ -25,12 +25,6 @@
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/dashboard.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css" type="text/css">
-    <style>
-      select.form-control{
-        display: inline;
-        width: 200px;
-      }
-    </style>
   </head>
   <body>
     <!-- Loader -->
@@ -238,55 +232,12 @@
             <div id="navigation">
               <!-- Navigation Menu-->
               <ul class="navigation-menu">
+                <li class="has-submenu">
+                  <a href="customer-index.html"><i class="dripicons-home"></i> Dashboard</a>
+                </li>
                 <li class="has-submenu active">
-                  <a href="coordinator-index.html"><i class="dripicons-home"></i> Dashboard</a>
-                </li>
-                <li class="has-submenu">
-                  <a href="coordinator-generate-request.html"><i class="dripicons-suitcase"></i> Generate Request
+                  <a href="customer-generate-request.html"><i class="dripicons-suitcase"></i> Generate Request
                   </a>                      
-                </li>
-                <li class="has-submenu">
-                  <a href="#"><i class="dripicons-user-group"></i> Register
-                    <i class="mdi mdi-chevron-down mdi-drop"></i></a>
-                    <ul class="submenu">
-                      <li>
-                        <ul>
-                          <li><a href="add-user.html">Add User</a></li>
-                          <li><a href="add-service-engineer.html">Add Service Engineer</a></li>
-                          <li><a href="add-dealer.html">Add Dealer</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                </li>
-                <li class="has-submenu">
-                  <a href="#"><i class="dripicons-document"></i> Reports
-                    <i class="mdi mdi-chevron-down mdi-drop"></i></a>
-                    <ul class="submenu">
-                      <li>
-                        <ul>
-                          <li><a href="customer-report.html">Customer Report</a></li>
-                          <li><a href="dealer-report.html">Dealer report</a></li>
-                          <li><a href="service-engineer-report.html">Service Engineer Report</a></li>
-                          <li><a href="shipper-report.html">Shipper Report</a></li>
-                          <li><a href="sla-report.html">SLA wise Report</a></li>
-                          <li><a href="detailed-report.html">Detailed Report</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                </li>
-                <li class="has-submenu">
-                  <a href="#"><i class="dripicons-document"></i> Master
-                    <i class="mdi mdi-chevron-down mdi-drop"></i></a>
-                    <ul class="submenu">
-                      <li>
-                        <ul>
-                          <li><a href="item-master.html">Item Master</a></li>
-                          <li><a href="device-management.html">Device Management</a></li>
-                          <li><a href="brand-management.html">Brand management</a></li>
-                          <li><a href="model-management.html">Model Management</a></li>
-                        </ul>
-                      </li>
-                    </ul>
                 </li>
               </ul>
               <!-- End navigation menu -->
@@ -308,95 +259,106 @@
             <div class="page-title-box">
               <div class="row align-items-center">
                 <div class="col-md-8">
-                  <h4 class="page-title m-0"> Coordinator Dashboard > View Request</h4>
+                  <h4 class="page-title m-0"> Generate Request</h4>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <!-- end page title end breadcrumb -->
+        <!--Form for Generating Request-->
         <div class="row">
-          <div class="col-12">
-             <div class="card m-b-20">
-                <div class="card-body">
-                   <h4 class="mt-0 header-title">Request Detailed View</h4>
-                   
-                   <div class="table-responsive">
-                      <table class="table table-bordered table-striped mb-0">
-                         <tbody>                       
-                            <tr>
-                              <th class="text-nowrap" scope="row">Request ID</th>
-                              <td colspan="5">#001</td>
-                            </tr>
-                            <tr>
-                              <th class="text-nowrap" scope="row">Customer ID</th>
-                              <td colspan="5">gopalkrishna_b@lintechnokrats.com</td>
-                            </tr>
-                            <tr>
-                              <th class="text-nowrap" scope="row">Brand & Model Number</th>
-                              <td colspan="5">D-Link India model2</td>
-                            </tr>
-                            <tr>
-                              <th class="text-nowrap" scope="row">Requested Date</th>
-                              <td colspan="5">2020-11-03 01:10:42</td>
-                            </tr>
-                            <tr>
-                              <th class="text-nowrap" scope="row">Issue Details</th>
-                              <td colspan="5">Testing remarks by customer</td>
-                            </tr>
-                            <tr>
-                              <th class="text-nowrap" scope="row">Status</th>
-                              <td colspan="5">On Progress</td>
-                            </tr>
-                            <tr>
-                              <th class="text-nowrap" scope="row">SLA</th>
-                              <td colspan="5">The SLA agreement</td>
-                            </tr>
-                            <tr>
-                              <th class="text-nowrap" scope="row">Time Taken</th>
-                              <td colspan="5">4 hrs</td>
-                            </tr>
-                            <tr>
-                              <th class="text-nowrap" scope="row">Processed By</th>
-                              <td colspan="5">Service Engineer</td>
-                            </tr>
-                            <tr>
-                              <th class="text-nowrap" scope="row">Remarks Entered</th>
-                              <td colspan="5">Need a request</td>
-                            </tr>
-                            <tr>
-                              <th class="text-nowrap" scope="row">New Remarks</th>
-                              <td colspan="5"><textarea></textarea></td>
-                            </tr>
-                            <tr>
-                              <th class="text-nowrap" scope="row">New Status</th>
-                              <td colspan="5">
-                                <div class="category-filter">
-                                  <select id="statusDropdown" class="form-control">
-                                    <option value="Pending">Pending</option>
-                                    <option value="On Progress">On Progress</option>
-                                    <option value="Escalated">Escalated</option>
-                                    <option value="Shipped">Shipped</option>
-                                    <option value="Completed">Completed</option>
-                                    <option value="Closed">Closed</option>
-                                  </select>
+            <div class="col-12">
+                <div class="card m-b-30">
+                    <div class="card-body">
+                        <h4 class="mt-0 header-title">Create A Request</h4>
+                        <div class="m-3">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="p-20">
+                                            <div class="form-group">
+                                                <label>Select Device</label>
+                                                <select class="form-control">
+                                                    <option>Select</option>
+                                                    <option>Laptop</option>
+                                                    <option>Desktop</option>
+                                                </select>   
+                                            </div>  
+                                            <div class="form-group">
+                                                <label>Serial Number</label>
+                                                <input class="form-control" type="text" value="" 
+                                                    placeholder="Enter Serial number">   
+                                            </div>      
+                                        
+                                    </div>
                                 </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="text-center" colspan="10">
-                                <button class="btn btn-primary">Update</button>
-                              </td>
-                            </tr>
-                         </tbody>
-                      </table>
-                   </div>
+                                <div class="col-lg-4">
+                                    <div class="p-20"> 
+                                            <div class="form-group">
+                                                <label>Select Brand</label>
+                                                <select class="form-control">
+                                                    <option>Select</option>
+                                                    <option>HCL</option>
+                                                    <option>D-Link</option>
+                                                </select>   
+                                            </div> 
+                                            <div class="form-group">
+                                                <label>Item Number</label>
+                                                <input class="form-control" type="text" value="" 
+                                                    placeholder="Enter Item number">   
+                                            </div>        
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="p-20">
+                                            <div class="form-group">
+                                                <label for="model">Select Model</label>
+                                                    <select id="model" class="form-control">
+                                                        <option>Select</option>
+                                                        <option>Model 1</option>
+                                                        <option>Model 2</option>
+                                                    </select> 
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="p-20">
+                                        <div class="form-group">
+                                            <label>Address</label>
+                                                <textarea class="form-control" placeholder="Enter Address">  
+                                                </textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="p-20">
+                                        <div class="form-group">
+                                            <label>Issue/Problem in Details</label>
+                                                <textarea class="form-control" placeholder="Enter Issue in Detail">  
+                                                </textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="p-20 text-center">
+                                        <button class="btn btn-primary">Update</button>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-             </div>
-          </div>
-          <!-- end col -->
-       </div>
-       
+            </div><!-- end col -->
+        </div>
+
+        <!-- End Form-->
+        <!-- end row -->
       </div>
       <!-- end container-fluid -->
     </div>
@@ -417,13 +379,14 @@
     <script src="assets/js/modernizr.min.js"></script>
     <script src="assets/js/waves.js"></script>
     <script src="assets/js/jquery.slimscroll.js"></script>
-    <!--Morris Chart-->
-    <script src="assets/js/morris.min.js"></script>
-    <script src="assets/js/raphael.min.js"></script>
-    <script src="./assets/js/morris.init.js"></script>
+    <!-- Parsley js -->
+    <script src="../plugins/parsleyjs/parsley.min.js"></script>
     <!-- dashboard js -->
     <script src="assets/js/coordinator-dashboard.int.js"></script>
     <!-- App js -->
     <script src="assets/js/app.js"></script>
+    <script>$(document).ready(function () {
+        $('form').parsley();
+    });</script>
   </body>
 </html>
