@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,user-scalable=0,minimal-ui"
+    />
+    <title>Service DashBoard</title>
+    <meta content="Admin Dashboard" name="description" />
+    <meta content="ThemeDesign" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App Icons -->
+    <!--  <link rel="shortcut icon" href="assets/images/favicon.ico" /> -->
+    <!-- morris css -->
+    <link rel="stylesheet" href="assets/css/morris.css" />
+    <!-- App css -->
+    <link
+      href="assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/dashboard.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css" type="text/css">
+    <style>
+      select.form-control{
+        display: inline;
+        width: 200px;
+        margin-left: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loader -->
+    <div id="preloader">
+      <div id="status">
+        <div class="spinner">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="rect5"></div>
+        </div>
+      </div>
+    </div>
+    <div class="header-bg">
+      <!-- Navigation Bar-->
+      <header id="topnav">
+        <div class="topbar-main">
+          <div class="container-fluid">
+            <!-- Logo-->
+            <div>
+              <a href="#" class="logo"
+                ><img src="assets/images/logo.png" alt="Techmek" 
+              /></a>
+            </div>
+            <!-- End Logo-->
+            <div class="menu-extras topbar-custom navbar p-0">
+              <ul class="list-inline d-none d-lg-block mb-0">
+                <li class="list-inline-item dropdown notification-list">
+                  <a
+                    class="nav-link dropdown-toggle arrow-none waves-effect"
+                    data-toggle="dropdown"
+                    href="#"
+                    role="button"
+                    aria-haspopup="false"
+                    aria-expanded="false"
+                    >Create New <i class="mdi mdi-plus"></i
+                  ></a>
+                </li>
+              </ul>
+              <!-- Search input -->
+              <!-- <div class="search-wrap" id="search-wrap">
+                <div class="search-bar">
+                  <input
+                    class="search-input"
+                    type="search"
+                    placeholder="Search"
+                  />
+                  <a
+                    href="#"
+                    class="close-search toggle-search"
+                    data-target="#search-wrap"
+                    ><i class="mdi mdi-close-circle"></i
+                  ></a>
+                </div>
+              </div> -->
+              <ul class="list-inline ml-auto mb-0">
+                <!-- notification-->
+      
+                <li class="list-inline-item dropdown notification-list">
+                  <a
+                    class="nav-link dropdown-toggle arrow-none waves-effect"
+                    data-toggle="dropdown"
+                    href="#"
+                    role="button"
+                    aria-haspopup="false"
+                    aria-expanded="false"
+                    ><i class="mdi mdi-bell-outline noti-icon"></i>
+                    <span class="badge badge-pill noti-icon-badge">3</span></a
+                  >
+                  <div
+                    class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-menu-lg dropdown-menu-animated"
+                  >
+                    <!-- item-->
+                    <div class="dropdown-item noti-title">
+                      <h5>Notification (3)</h5>
+                    </div>
+                    <div class="slimscroll-noti">
+                      <!-- item-->
+                      <a
+                        href="javascript:void(0);"
+                        class="dropdown-item notify-item active"
+                        ><div class="notify-icon bg-success">
+                          <i class="mdi mdi-cart-outline"></i>
+                        </div>
+                        <p class="notify-details">
+                          <b>Your order is placed</b
+                          ><span class="text-muted"
+                            >Dummy text of the printing and typesetting
+                            industry.</span
+                          >
+                        </p></a
+                      ><!-- item-->
+                      <a
+                        href="javascript:void(0);"
+                        class="dropdown-item notify-item"
+                        ><div class="notify-icon bg-danger">
+                          <i class="mdi mdi-message-text-outline"></i>
+                        </div>
+                        <p class="notify-details">
+                          <b>New Message received</b
+                          ><span class="text-muted"
+                            >You have 87 unread messages</span
+                          >
+                        </p></a
+                      ><!-- item-->
+                      <a
+                        href="javascript:void(0);"
+                        class="dropdown-item notify-item"
+                        ><div class="notify-icon bg-info">
+                          <i class="mdi mdi-filter-outline"></i>
+                        </div>
+                        <p class="notify-details">
+                          <b>Your item is shipped</b
+                          ><span class="text-muted"
+                            >It is a long established fact that a reader
+                            will</span
+                          >
+                        </p></a
+                      ><!-- item-->
+                      <a
+                        href="javascript:void(0);"
+                        class="dropdown-item notify-item"
+                        ><div class="notify-icon bg-success">
+                          <i class="mdi mdi-message-text-outline"></i>
+                        </div>
+                        <p class="notify-details">
+                          <b>New Message received</b
+                          ><span class="text-muted"
+                            >You have 87 unread messages</span
+                          >
+                        </p></a
+                      ><!-- item-->
+                      <a
+                        href="javascript:void(0);"
+                        class="dropdown-item notify-item"
+                        ><div class="notify-icon bg-warning">
+                          <i class="mdi mdi-cart-outline"></i>
+                        </div>
+                        <p class="notify-details">
+                          <b>Your order is placed</b
+                          ><span class="text-muted"
+                            >Dummy text of the printing and typesetting
+                            industry.</span
+                          >
+                        </p></a
+                      >
+                    </div>
+                    <!-- All-->
+                    <a
+                      href="javascript:void(0);"
+                      class="dropdown-item notify-all"
+                      >View All</a
+                    >
+                  </div>
+                </li>
+                <!-- User-->
+                <li
+                  class="list-inline-item dropdown notification-list nav-user"
+                >
+                  <a
+                    class="nav-link dropdown-toggle arrow-none waves-effect"
+                    data-toggle="dropdown"
+                    href="#"
+                    role="button"
+                    aria-haspopup="false"
+                    aria-expanded="false"
+                    ><!-- <img
+                      src="assets/images/users/avatar-6.jpg"
+                      alt="user"
+                      class="rounded-circle" /> -->
+                    <span class="d-none d-md-inline-block ml-1"
+                      >David M. Bailey
+                      <i class="mdi mdi-chevron-down"></i></span
+                  ></a>
+                  <div
+                    class="dropdown-menu dropdown-menu-right dropdown-menu-animated profile-dropdown"
+                  >
+                    <a class="dropdown-item" href="#"
+                      ><i class="dripicons-user text-muted"></i> Profile</a
+                    >
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#"
+                      ><i class="dripicons-exit text-muted"></i> Logout</a
+                    >
+                  </div>
+                </li>
+                <li class="menu-item list-inline-item">
+                  <!-- Mobile menu toggle-->
+                  <a class="navbar-toggle nav-link"
+                    ><div class="lines">
+                      <span></span> <span></span> <span></span></div></a
+                  ><!-- End mobile menu toggle-->
+                </li>
+              </ul>
+            </div>
+            <!-- end menu-extras -->
+            <div class="clearfix"></div>
+          </div>
+          <!-- end container -->
+        </div>
+        <!-- end topbar-main --><!-- MENU Start -->
+        <div class="navbar-custom">
+          <div class="container">
+            <div id="navigation">
+              <!-- Navigation Menu-->
+              <ul class="navigation-menu">
+                <li class="has-submenu active">
+                  <a href="service-engineer-index.html"><i class="dripicons-home"></i> Dashboard</a>
+                </li>
+              </ul>
+              <!-- End navigation menu -->
+            </div>
+            <!-- end #navigation -->
+          </div>
+          <!-- end container -->
+        </div>
+        <!-- end navbar-custom -->
+      </header>
+      <!-- End Navigation Bar-->
+    </div>
+    <!-- header-bg -->
+    <div class="wrapper">
+      <div class="container">
+        <!-- Page-Title -->
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="page-title-box">
+              <div class="row align-items-center">
+                <div class="col-md-8">
+                  <h4 class="page-title m-0"> Service Engineer Dashboard</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end page title end breadcrumb -->
+              
+        <!-- Service Engineer Request Table -->
+        <div id="serviceengineerrequest" class="row">
+          <div class="col-xl-12">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="mt-0 header-title mb-4">Service Engineer Requests</h3>
+                <div class="category-filter">
+                  <select id="categoryFilter" class="form-control">
+                    <option value="">Show All</option>
+                    <option value="New">New</option>
+                    <option value="On Going">On Going</option>
+                  </select>
+                </div>
+                <div class="table-responsive">
+                  <table id="service-engineer-request-table" class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">Request ID</th>
+                        <th scope="col">Brand</th>
+                        <th scope="col">Model</th>
+                        <th scope="col">SLA</th>
+                        <th scope="col">Issue Details</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">View In Detail</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">#14567</th>
+                        <td>Dell Inspiron 14</td>
+                        <td>DH543332323</td>
+                        <td>SLA Agreement</td>
+                        <td>test issue one</td>
+                        <td>New</td>
+                        <td><a href="service-engineer-dashboard-detailed-view.html">View Status</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">#45567</th>
+                        <td>HP Inspiron 14</td>
+                        <td>H549393323</td>
+                        <td>SLA Agreement</td>
+                        <td>test issue 2</td>
+                        <td>On Going</td>
+                        <td><a href="service-engineer-dashboard-detailed-view.html">View Status</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">#14567</th>
+                        <td>Dell Inspiron 14</td>
+                        <td>DH543332323</td>
+                        <td>SLA Agreement</td>
+                        <td>test issue one</td>
+                        <td>New</td>
+                        <td><a href="service-engineer-dashboard-detailed-view.html">View Status</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">#45567</th>
+                        <td>HP Inspiron 14</td>
+                        <td>H549393323</td>
+                        <td>SLA Agreement</td>
+                        <td>test issue 2</td>
+                        <td>On Going</td>
+                        <td><a href="service-engineer-dashboard-detailed-view.html">View Status</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">#14567</th>
+                        <td>Dell Inspiron 14</td>
+                        <td>DH543332323</td>
+                        <td>SLA Agreement</td>
+                        <td>test issue one</td>
+                        <td>New</td>
+                        <td><a href="service-engineer-dashboard-detailed-view.html">View Status</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">#45567</th>
+                        <td>HP Inspiron 14</td>
+                        <td>H549393323</td>
+                        <td>SLA Agreement</td>
+                        <td>test issue 2</td>
+                        <td>On Going</td>
+                        <td><a href="service-engineer-dashboard-detailed-view.html">View Status</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">#14567</th>
+                        <td>Dell Inspiron 14</td>
+                        <td>DH543332323</td>
+                        <td>SLA Agreement</td>
+                        <td>test issue one</td>
+                        <td>New</td>
+                        <td><a href="service-engineer-dashboard-detailed-view.html">View Status</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">#45567</th>
+                        <td>HP Inspiron 14</td>
+                        <td>H549393323</td>
+                        <td>SLA Agreement</td>
+                        <td>test issue 2</td>
+                        <td>On Going</td>
+                        <td><a href="service-engineer-dashboard-detailed-view.html">View Status</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">#14567</th>
+                        <td>Dell Inspiron 14</td>
+                        <td>DH543332323</td>
+                        <td>SLA Agreement</td>
+                        <td>test issue one</td>
+                        <td>New</td>
+                        <td><a href="service-engineer-dashboard-detailed-view.html">View Status</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">#45567</th>
+                        <td>HP Inspiron 14</td>
+                        <td>H549393323</td>
+                        <td>SLA Agreement</td>
+                        <td>test issue 2</td>
+                        <td>On Going</td>
+                        <td><a href="service-engineer-dashboard-detailed-view.html">View Status</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">#14567</th>
+                        <td>Dell Inspiron 14</td>
+                        <td>DH543332323</td>
+                        <td>SLA Agreement</td>
+                        <td>test issue one</td>
+                        <td>New</td>
+                        <td><a href="service-engineer-dashboard-detailed-view.html">View Status</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">#45567</th>
+                        <td>HP Inspiron 14</td>
+                        <td>H549393323</td>
+                        <td>SLA Agreement</td>
+                        <td>test issue 2</td>
+                        <td>On Going</td>
+                        <td><a href="service-engineer-dashboard-detailed-view.html">View Status</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">#14567</th>
+                        <td>Dell Inspiron 14</td>
+                        <td>DH543332323</td>
+                        <td>SLA Agreement</td>
+                        <td>test issue one</td>
+                        <td>New</td>
+                        <td><a href="service-engineer-dashboard-detailed-view.html">View Status</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">#45567</th>
+                        <td>HP Inspiron 14</td>
+                        <td>H549393323</td>
+                        <td>SLA Agreement</td>
+                        <td>test issue 2</td>
+                        <td>On Going</td>
+                        <td><a href="service-engineer-dashboard-detailed-view.html">View Status</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">#14567</th>
+                        <td>Dell Inspiron 14</td>
+                        <td>DH543332323</td>
+                        <td>SLA Agreement</td>
+                        <td>test issue one</td>
+                        <td>New</td>
+                        <td><a href="service-engineer-dashboard-detailed-view.html">View Status</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">#45567</th>
+                        <td>HP Inspiron 14</td>
+                        <td>H549393323</td>
+                        <td>SLA Agreement</td>
+                        <td>test issue 2</td>
+                        <td>On Going</td>
+                        <td><a href="service-engineer-dashboard-detailed-view.html">View Status</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">#14567</th>
+                        <td>Dell Inspiron 14</td>
+                        <td>DH543332323</td>
+                        <td>SLA Agreement</td>
+                        <td>test issue one</td>
+                        <td>New</td>
+                        <td><a href="service-engineer-dashboard-detailed-view.html">View Status</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">#45567</th>
+                        <td>HP Inspiron 14</td>
+                        <td>H549393323</td>
+                        <td>SLA Agreement</td>
+                        <td>test issue 2</td>
+                        <td>On Going</td>
+                        <td><a href="service-engineer-dashboard-detailed-view.html">View Status</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">#14567</th>
+                        <td>Dell Inspiron 14</td>
+                        <td>DH543332323</td>
+                        <td>SLA Agreement</td>
+                        <td>test issue one</td>
+                        <td>New</td>
+                        <td><a href="service-engineer-dashboard-detailed-view.html">View Status</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">#45567</th>
+                        <td>HP Inspiron 14</td>
+                        <td>H549393323</td>
+                        <td>SLA Agreement</td>
+                        <td>test issue 2</td>
+                        <td>On Going</td>
+                        <td><a href="service-engineer-dashboard-detailed-view.html">View Status</a></td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container-fluid -->
+    </div>
+    <!-- end wrapper --><!-- Footer -->
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            © 2020 Service Dashboard
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer --><!-- jQuery  -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/modernizr.min.js"></script>
+    <script src="assets/js/waves.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+    <script type="text/javascript" src="assets/js/datatables.min.js"></script>
+      <script>
+        $("document").ready(function () {
+    
+          $("#service-engineer-request-table").dataTable({
+            "searching": true
+          });
+    
+          //Get a reference to the new datatable
+          var table = $('#service-engineer-request-table').DataTable();
+    
+          //Take the category filter drop down and append it to the datatables_filter div. 
+          //You can use this same idea to move the filter anywhere withing the datatable that you want.
+          $("#service-engineer-request-table_filter.dataTables_filter").append($("#categoryFilter"));
+          
+          //Get the column index for the Category column to be used in the method below ($.fn.dataTable.ext.search.push)
+          //This tells datatables what column to filter on when a user selects a value from the dropdown.
+          //It's important that the text used here (Category) is the same for used in the header of the column to filter
+          var categoryIndex = 0;
+          $("#service-engineer-request-table th").each(function (i) {
+            if ($($(this)).html() == "Status") {
+              categoryIndex = i; return false;
+            }
+          });
+    
+          //Use the built in datatables API to filter the existing rows by the Category column
+          $.fn.dataTable.ext.search.push(
+            function (settings, data, dataIndex) {
+              var selectedItem = $('#categoryFilter').val()
+              var category = data[categoryIndex];
+              if (selectedItem === "" || category.includes(selectedItem)) {
+                return true;
+              }
+              return false;
+            }
+          );
+    
+          //Set the change event for the Category Filter dropdown to redraw the datatable each time
+          //a user selects a new filter.
+          $("#categoryFilter").change(function (e) {
+            table.draw();
+          });
+    
+          table.draw();
+        });
+      </script>
+  </body>
+</html>

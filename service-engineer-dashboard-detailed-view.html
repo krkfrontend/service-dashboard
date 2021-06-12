@@ -239,7 +239,7 @@
               <!-- Navigation Menu-->
               <ul class="navigation-menu">
                 <li class="has-submenu active">
-                  <a href="shipper-index.html"><i class="dripicons-home"></i> Dashboard</a>
+                  <a href="service-engineer-index.html"><i class="dripicons-home"></i> Dashboard</a>
                 </li>               
               </ul>
               <!-- End navigation menu -->
@@ -261,7 +261,7 @@
             <div class="page-title-box">
               <div class="row align-items-center">
                 <div class="col-md-8">
-                  <h4 class="page-title m-0"> Shipper Dashboard > View Dealer Request</h4>
+                  <h4 class="page-title m-0"> Service Engineer Dashboard > View Request</h4>
                 </div>
               </div>
             </div>
@@ -278,28 +278,28 @@
                       <table class="table table-bordered table-striped mb-0">
                          <tbody>                       
                             <tr>
-                              <th class="text-nowrap" scope="row">Dealer ID</th>
-                              <td colspan="5">#001</td>
+                              <th class="text-nowrap" scope="row">Request ID</th>
+                              <td colspan="5">#45567</td>
                             </tr>
                             <tr>
-                              <th class="text-nowrap" scope="row">Dealer Name</th>
-                              <td colspan="5">Dell Dealer</td>
+                              <th class="text-nowrap" scope="row">Brand</th>
+                              <td colspan="5">HP Inspiron 14</td>
                             </tr>
                             <tr>
-                              <th class="text-nowrap" scope="row">Location</th>
-                              <td colspan="5">Chennai</td>
+                              <th class="text-nowrap" scope="row">Model</th>
+                              <td colspan="5">H5345556677</td>
                             </tr>
                             <tr>
-                              <th class="text-nowrap" scope="row">No of Request</th>
-                              <td colspan="5">20</td>
+                              <th class="text-nowrap" scope="row">SLA</th>
+                              <td colspan="5">SLA Agreement</td>
                             </tr>
                             <tr>
-                                <th class="text-nowrap" scope="row">Shipment Type</th>
-                                <td colspan="5">Ekart</td>
+                                <th class="text-nowrap" scope="row">Issue Details</th>
+                                <td colspan="5">Test Issue One</td>
                               </tr>
                             <tr>
-                                <th class="text-nowrap" scope="row">Pickup Timing</th>
-                                <td colspan="5">2020-11-05 01:10:42</td>
+                                <th class="text-nowrap" scope="row">Status</th>
+                                <td colspan="5">New</td>
                               </tr>
                             
                             <tr>
@@ -310,6 +310,21 @@
                               <th class="text-nowrap" scope="row">New Remarks</th>
                               <td colspan="5"><textarea></textarea></td>
                             </tr>
+                            <tr>
+                                <th class="text-nowrap" scope="row">New Status</th>
+                                <td colspan="5">
+                                  <div class="category-filter">
+                                    <select id="statusDropdown" class="form-control">
+                                      <option value="New">New</option>
+                                      <option value="On Going">On Going</option>
+                                      <option value="Escalated">Escalated</option>
+                                      <option value="Shipped">Shipped</option>
+                                      <option value="Completed">Completed</option>
+                                      <option value="Closed">Closed</option>
+                                    </select>
+                                  </div>
+                                </td>
+                              </tr>
                             <tr>
                               <td class="text-center" colspan="10">
                                 <button class="btn btn-primary">Update</button>
@@ -344,12 +359,6 @@
     <script src="assets/js/modernizr.min.js"></script>
     <script src="assets/js/waves.js"></script>
     <script src="assets/js/jquery.slimscroll.js"></script>
-    <!--Morris Chart-->
-    <script src="assets/js/morris.min.js"></script>
-    <script src="assets/js/raphael.min.js"></script>
-    <script src="./assets/js/morris.init.js"></script>
-    <!-- dashboard js -->
-    <script src="assets/js/coordinator-dashboard.int.js"></script>
     <!-- App js -->
     <script src="assets/js/app.js"></script>
   </body>
