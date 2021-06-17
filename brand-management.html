@@ -7,12 +7,12 @@
       name="viewport"
       content="width=device-width,initial-scale=1,user-scalable=0,minimal-ui"
     />
-    <title>Techmek</title>
+    <title>Service DashBoard</title>
     <meta content="Admin Dashboard" name="description" />
     <meta content="ThemeDesign" name="author" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- App Icons -->
-    <link rel="shortcut icon" href="assets/images/techmek.png" />
+    <!--  <link rel="shortcut icon" href="assets/images/favicon.ico" /> -->
     <!-- morris css -->
     <link rel="stylesheet" href="assets/css/morris.css" />
     <!-- App css -->
@@ -43,7 +43,7 @@
       <!-- Navigation Bar-->
       <header id="topnav">
         <div class="topbar-main">
-          <div class="container">
+          <div class="container-fluid">
             <!-- Logo-->
             <div>
               <a href="#" class="logo"
@@ -235,7 +235,7 @@
                 <li class="has-submenu">
                   <a href="coordinator-index.html"><i class="dripicons-home"></i> Dashboard</a>
                 </li>
-                <li class="has-submenu active">
+                <li class="has-submenu">
                   <a href="coordinator-generate-request.html"><i class="dripicons-suitcase"></i> Generate Request
                   </a>                      
                 </li>
@@ -268,7 +268,7 @@
                       </li>
                     </ul>
                 </li>
-                <li class="has-submenu">
+                <li class="has-submenu active">
                   <a href="#"><i class="dripicons-document"></i> Master
                     <i class="mdi mdi-chevron-down mdi-drop"></i></a>
                     <ul class="submenu">
@@ -302,118 +302,50 @@
             <div class="page-title-box">
               <div class="row align-items-center">
                 <div class="col-md-8">
-                  <h4 class="page-title m-0"> Generate Request</h4>
+                  <h4 class="page-title m-0"> Brand Management</h4>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <!-- end page title end breadcrumb -->
-        <!--Form for Generating Request-->
+        <!--Form for Adding Items-->
         <div class="row">
             <div class="col-12">
                 <div class="card m-b-30">
                     <div class="card-body">
-                        <h4 class="mt-0 header-title">Create A Request</h4>
+                        <h4 class="mt-0 header-title">Add Brand</h4>
                         <div class="m-3">
                             <div class="row">
                                 <div class="col-lg-4">
                                     <div class="p-20">
-                                        
                                             <div class="form-group">
-                                                <label for="customer-name">Customer Name</label>
-                                                <input class="form-control" type="text" value="" 
-                                                 id="customer-name" placeholder="Enter Customer Name">   
-                                            </div> 
-                                            <div class="form-group">
-                                                <label>Select Device</label>
-                                                <select class="form-control">
-                                                    <option>Select</option>
+                                                <label> Select Device</label>
+                                                <select class="form-control" >
+                                                    <option>Monitor</option>
+                                                    <option>Keyboard</option>
                                                     <option>Laptop</option>
-                                                    <option>Desktop</option>
-                                                </select>   
-                                            </div>  
-                                            <div class="form-group">
-                                                <label>Serial Number</label>
-                                                <input class="form-control" type="text" value="" 
-                                                    placeholder="Enter Serial number">   
-                                            </div>      
-                                        
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="p-20">
-                                        
-                                            <div class="form-group">
-                                                <label for="mobile-number">Mobile Number</label>
-                                                <input class="form-control" type="number" value="" 
-                                                 id="mobile-number" placeholder="Enter Mobile Number">   
-                                            </div>  
-                                            <div class="form-group">
-                                                <label>Select Brand</label>
-                                                <select class="form-control">
-                                                    <option>Select</option>
-                                                    <option>HCL</option>
-                                                    <option>D-Link</option>
-                                                </select>   
-                                            </div> 
-                                            <div class="form-group">
-                                                <label>Item Number</label>
-                                                <input class="form-control" type="text" value="" 
-                                                    placeholder="Enter Item number">   
-                                            </div>        
-                                        
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="p-20">
-                                        
-                                            <div class="form-group">
-                                                <label for="email-id">Email Id</label>
-                                                <input class="form-control" type="email" value="" 
-                                                 id="email-id" placeholder="Enter Email ID">   
+                                                </select>  
                                             </div>
-                                            <div class="form-group">
-                                                <label for="model">Select Model</label>
-                                                    <select id="model" class="form-control">
-                                                        <option>Select</option>
-                                                        <option>Model 1</option>
-                                                        <option>Model 2</option>
-                                                    </select> 
-                                            </div> 
-                                            <div class="form-group">
-                                                <label>Pincode</label>
-                                                <input class="form-control" type="text" value="" 
-                                                    placeholder="Enter Pin Code">   
-                                            </div>         
                                         
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="p-20">
+                                <div  class="col-lg-4">
+                                    <div class="p-20">                                    
                                         <div class="form-group">
-                                            <label>Address</label>
-                                                <textarea class="form-control" placeholder="Enter Address">  
-                                                </textarea>
+                                            <label> Brand Name</label>
+                                            <input class="form-control" type="text" value="" 
+                                                placeholder="Enter brand Name">   
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
-                                    <div class="p-20">
-                                        <div class="form-group">
-                                            <label>Issue/Problem in Details</label>
-                                                <textarea class="form-control" placeholder="Enter Issue in Detail">  
-                                                </textarea>
-                                        </div>
-                                    </div>
-                                </div>
+                                
+                                
                             </div>
                             <div class="row">
                                 <div class="col-12">
                                     <div class="p-20 text-center">
-                                        <button class="btn btn-primary">Submit</button>
+                                        <button class="btn btn-primary">Add</button>
                                     </div>
     
                                 </div>
@@ -425,6 +357,255 @@
         </div>
 
         <!-- End Form-->
+        <!--Table to show added Items-->
+        <div class="row">
+            <div class="col-xl-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="mt-0 header-title mb-4">Brand Master Update/Delete</h4>
+                  
+                  <div class="table-responsive">
+                    <table id="brand-master-table" class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th scope="col">ID</th>
+                          <th scope="col">Device Name</th>
+                          <th scope="col">Brand Name</th>
+                          <th scope="col">Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>DELL MONITER 17 inc</td>
+                            <td>DELL</td>
+                            <td>
+                                <a href="brand-master-view.html">View</a>|
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>HP MONITER 13 inc</td>
+                            <td>HP</td>
+                            <td>
+                                <a href="brand-master-view.html">View</a>|
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>DELL MONITER 17 inc</td>
+                            <td>DELL</td>
+                            <td>
+                                <a href="brand-master-view.html">View</a>|
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>HP MONITER 13 inc</td>
+                            <td>HP</td>
+                            <td>
+                                <a href="brand-master-view.html">View</a>|
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>DELL MONITER 17 inc</td>
+                            <td>DELL</td>
+                            <td>
+                                <a href="brand-master-view.html">View</a>|
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>HP MONITER 13 inc</td>
+                            <td>HP</td>
+                            <td>
+                                <a href="brand-master-view.html">View</a>|
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>DELL MONITER 17 inc</td>
+                            <td>DELL</td>
+                            <td>
+                                <a href="brand-master-view.html">View</a>|
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>HP MONITER 13 inc</td>
+                            <td>HP</td>
+                            <td>
+                                <a href="brand-master-view.html">View</a>|
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>DELL MONITER 17 inc</td>
+                            <td>DELL</td>
+                            <td>
+                                <a href="brand-master-view.html">View</a>|
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>HP MONITER 13 inc</td>
+                            <td>HP</td>
+                            <td>
+                                <a href="brand-master-view.html">View</a>|
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>DELL MONITER 17 inc</td>
+                            <td>DELL</td>
+                            <td>
+                                <a href="brand-master-view.html">View</a>|
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>HP MONITER 13 inc</td>
+                            <td>HP</td>
+                            <td>
+                                <a href="brand-master-view.html">View</a>|
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>DELL MONITER 17 inc</td>
+                            <td>DELL</td>
+                            <td>
+                                <a href="brand-master-view.html">View</a>|
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>HP MONITER 13 inc</td>
+                            <td>HP</td>
+                            <td>
+                                <a href="brand-master-view.html">View</a>|
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>DELL MONITER 17 inc</td>
+                            <td>DELL</td>
+                            <td>
+                                <a href="brand-master-view.html">View</a>|
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>HP MONITER 13 inc</td>
+                            <td>HP</td>
+                            <td>
+                                <a href="brand-master-view.html">View</a>|
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>DELL MONITER 17 inc</td>
+                            <td>DELL</td>
+                            <td>
+                                <a href="brand-master-view.html">View</a>|
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>HP MONITER 13 inc</td>
+                            <td>HP</td>
+                            <td>
+                                <a href="brand-master-view.html">View</a>|
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>DELL MONITER 17 inc</td>
+                            <td>DELL</td>
+                            <td>
+                                <a href="brand-master-view.html">View</a>|
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>HP MONITER 13 inc</td>
+                            <td>HP</td>
+                            <td>
+                                <a href="brand-master-view.html">View</a>|
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>DELL MONITER 17 inc</td>
+                            <td>DELL</td>
+                            <td>
+                                <a href="brand-master-view.html">View</a>|
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>HP MONITER 13 inc</td>
+                            <td>HP</td>
+                            <td>
+                                <a href="brand-master-view.html">View</a>|
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>DELL MONITER 17 inc</td>
+                            <td>DELL</td>
+                            <td>
+                                <a href="brand-master-view.html">View</a>|
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>HP MONITER 13 inc</td>
+                            <td>HP</td>
+                            <td>
+                                <a href="brand-master-view.html">View</a>|
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        <!--End Table-->
         <!-- end row -->
       </div>
       <!-- end container-fluid -->
@@ -446,14 +627,21 @@
     <script src="assets/js/modernizr.min.js"></script>
     <script src="assets/js/waves.js"></script>
     <script src="assets/js/jquery.slimscroll.js"></script>
-    <!-- Parsley js -->
-    <script src="../plugins/parsleyjs/parsley.min.js"></script>
+    <!--Morris Chart-->
+    <script src="assets/js/morris.min.js"></script>
+    <script src="assets/js/raphael.min.js"></script>
+    <script src="./assets/js/morris.init.js"></script>
     <!-- dashboard js -->
     <script src="assets/js/coordinator-dashboard.int.js"></script>
     <!-- App js -->
     <script src="assets/js/app.js"></script>
-    <script>$(document).ready(function () {
-        $('form').parsley();
-    });</script>
+    <script type="text/javascript" src="assets/js/datatables.min.js"></script>
+    <script>
+        $("document").ready(function () {
+    
+          $("#brand-master-table").dataTable({
+          });
+        });
+      </script>
   </body>
 </html>

@@ -7,12 +7,12 @@
       name="viewport"
       content="width=device-width,initial-scale=1,user-scalable=0,minimal-ui"
     />
-    <title>Techmek</title>
+    <title>Service DashBoard</title>
     <meta content="Admin Dashboard" name="description" />
     <meta content="ThemeDesign" name="author" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- App Icons -->
-    <link rel="shortcut icon" href="assets/images/techmek.png" />
+    <!--  <link rel="shortcut icon" href="assets/images/favicon.ico" /> -->
     <!-- morris css -->
     <link rel="stylesheet" href="assets/css/morris.css" />
     <!-- App css -->
@@ -43,7 +43,7 @@
       <!-- Navigation Bar-->
       <header id="topnav">
         <div class="topbar-main">
-          <div class="container">
+          <div class="container-fluid">
             <!-- Logo-->
             <div>
               <a href="#" class="logo"
@@ -235,7 +235,7 @@
                 <li class="has-submenu">
                   <a href="coordinator-index.html"><i class="dripicons-home"></i> Dashboard</a>
                 </li>
-                <li class="has-submenu active">
+                <li class="has-submenu">
                   <a href="coordinator-generate-request.html"><i class="dripicons-suitcase"></i> Generate Request
                   </a>                      
                 </li>
@@ -252,7 +252,7 @@
                       </li>
                     </ul>
                 </li>
-                <li class="has-submenu">
+                <li class="has-submenu active">
                   <a href="#"><i class="dripicons-document"></i> Reports
                     <i class="mdi mdi-chevron-down mdi-drop"></i></a>
                     <ul class="submenu">
@@ -302,7 +302,7 @@
             <div class="page-title-box">
               <div class="row align-items-center">
                 <div class="col-md-8">
-                  <h4 class="page-title m-0"> Generate Request</h4>
+                  <h4 class="page-title m-0"> Detailed Report</h4>
                 </div>
               </div>
             </div>
@@ -314,30 +314,67 @@
             <div class="col-12">
                 <div class="card m-b-30">
                     <div class="card-body">
-                        <h4 class="mt-0 header-title">Create A Request</h4>
+                        <h4 class="mt-0 header-title">Generate Report</h4>
                         <div class="m-3">
                             <div class="row">
                                 <div class="col-lg-4">
                                     <div class="p-20">
                                         
                                             <div class="form-group">
-                                                <label for="customer-name">Customer Name</label>
-                                                <input class="form-control" type="text" value="" 
-                                                 id="customer-name" placeholder="Enter Customer Name">   
-                                            </div> 
-                                            <div class="form-group">
-                                                <label>Select Device</label>
+                                                <label for="customer-name"> Customer Name</label>
                                                 <select class="form-control">
                                                     <option>Select</option>
-                                                    <option>Laptop</option>
-                                                    <option>Desktop</option>
+                                                    <option>Name 1</option>
+                                                    <option>Name 2</option>
+                                                    <option>name 3</option>
+                                                    <option>Name 4</option>
                                                 </select>   
+                                            </div> 
+                                            <div class="form-group">
+                                                <label>From Date*</label>
+                                                <input class="form-control" type="date" 
+                                                    value="" placeholder="Enter From Date">
+                                            </div>    
+                                            <div class="form-group">
+                                              <label> Service Engineer Name</label>
+                                              <select class="form-control">
+                                                  <option>Select</option>
+                                                  <option>Name 1</option>
+                                                  <option>Name 2</option>
+                                                  <option>name 3</option>
+                                                  <option>Name 4</option>
+                                              </select>   
+                                          </div> 
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="p-20">
+                                        
+                                          <div class="form-group">
+                                            <label>Select Issue Category</label>
+                                            <select class="form-control">
+                                              <option>Select</option>
+                                              <option>test 1</option>
+                                              <option>test 2</option>
+                                            </select>
+                                          </div>
+                                            <div class="form-group">
+                                                <label>To Date*</label>
+                                                <input class="form-control" type="date" 
+                                                    value="" placeholder="Enter To Date">
                                             </div>  
                                             <div class="form-group">
-                                                <label>Serial Number</label>
-                                                <input class="form-control" type="text" value="" 
-                                                    placeholder="Enter Serial number">   
-                                            </div>      
+                                              <label> Shipper Delivered</label>
+                                              <select class="form-control">
+                                                  <option>Select</option>
+                                                  <option>Name 1</option>
+                                                  <option>Name 2</option>
+                                                  <option>name 3</option>
+                                                  <option>Name 4</option>
+                                              </select>   
+                                          </div>  
+                                             
                                         
                                     </div>
                                 </div>
@@ -345,75 +382,37 @@
                                     <div class="p-20">
                                         
                                             <div class="form-group">
-                                                <label for="mobile-number">Mobile Number</label>
-                                                <input class="form-control" type="number" value="" 
-                                                 id="mobile-number" placeholder="Enter Mobile Number">   
-                                            </div>  
-                                            <div class="form-group">
-                                                <label>Select Brand</label>
-                                                <select class="form-control">
-                                                    <option>Select</option>
-                                                    <option>HCL</option>
-                                                    <option>D-Link</option>
-                                                </select>   
-                                            </div> 
-                                            <div class="form-group">
-                                                <label>Item Number</label>
-                                                <input class="form-control" type="text" value="" 
-                                                    placeholder="Enter Item number">   
-                                            </div>        
-                                        
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="p-20">
-                                        
-                                            <div class="form-group">
-                                                <label for="email-id">Email Id</label>
-                                                <input class="form-control" type="email" value="" 
-                                                 id="email-id" placeholder="Enter Email ID">   
+                                              <label>Select Issue Status</label>
+                                              <select class="form-control">
+                                                <option value="New">New</option>
+                                                <option value="Pending">Pending</option>
+                                                <option value="Completed">Completed</option>
+                                                <option value="Closed">Closed</option>
+                                              </select>
                                             </div>
                                             <div class="form-group">
-                                                <label for="model">Select Model</label>
-                                                    <select id="model" class="form-control">
-                                                        <option>Select</option>
-                                                        <option>Model 1</option>
-                                                        <option>Model 2</option>
-                                                    </select> 
-                                            </div> 
-                                            <div class="form-group">
-                                                <label>Pincode</label>
-                                                <input class="form-control" type="text" value="" 
-                                                    placeholder="Enter Pin Code">   
-                                            </div>         
+                                              <label> Shipper Picked Up</label>
+                                              <select class="form-control">
+                                                  <option>Select</option>
+                                                  <option>Name 1</option>
+                                                  <option>Name 2</option>
+                                                  <option>name 3</option>
+                                                  <option>Name 4</option>
+                                              </select>   
+                                          </div> 
+                                          <div class="form-group">
+                                            <label>Cost Involved</label>
+                                            <input class="form-control" type="number" 
+                                                value="" placeholder="Enter Cost Involved">
+                                        </div>          
                                         
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="p-20">
-                                        <div class="form-group">
-                                            <label>Address</label>
-                                                <textarea class="form-control" placeholder="Enter Address">  
-                                                </textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="p-20">
-                                        <div class="form-group">
-                                            <label>Issue/Problem in Details</label>
-                                                <textarea class="form-control" placeholder="Enter Issue in Detail">  
-                                                </textarea>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12">
                                     <div class="p-20 text-center">
-                                        <button class="btn btn-primary">Submit</button>
+                                        <button class="btn btn-primary">Generate Report</button>
                                     </div>
     
                                 </div>
@@ -452,8 +451,5 @@
     <script src="assets/js/coordinator-dashboard.int.js"></script>
     <!-- App js -->
     <script src="assets/js/app.js"></script>
-    <script>$(document).ready(function () {
-        $('form').parsley();
-    });</script>
   </body>
 </html>

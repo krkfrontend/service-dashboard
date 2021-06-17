@@ -7,12 +7,12 @@
       name="viewport"
       content="width=device-width,initial-scale=1,user-scalable=0,minimal-ui"
     />
-    <title>Techmek</title>
+    <title>Service DashBoard</title>
     <meta content="Admin Dashboard" name="description" />
     <meta content="ThemeDesign" name="author" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- App Icons -->
-    <link rel="shortcut icon" href="assets/images/techmek.png" />
+    <!--  <link rel="shortcut icon" href="assets/images/favicon.ico" /> -->
     <!-- morris css -->
     <link rel="stylesheet" href="assets/css/morris.css" />
     <!-- App css -->
@@ -43,7 +43,7 @@
       <!-- Navigation Bar-->
       <header id="topnav">
         <div class="topbar-main">
-          <div class="container">
+          <div class="container-fluid">
             <!-- Logo-->
             <div>
               <a href="#" class="logo"
@@ -235,11 +235,11 @@
                 <li class="has-submenu">
                   <a href="coordinator-index.html"><i class="dripicons-home"></i> Dashboard</a>
                 </li>
-                <li class="has-submenu active">
+                <li class="has-submenu">
                   <a href="coordinator-generate-request.html"><i class="dripicons-suitcase"></i> Generate Request
                   </a>                      
                 </li>
-                <li class="has-submenu">
+                <li class="has-submenu active">
                   <a href="#"><i class="dripicons-user-group"></i> Register
                     <i class="mdi mdi-chevron-down mdi-drop"></i></a>
                     <ul class="submenu">
@@ -302,7 +302,7 @@
             <div class="page-title-box">
               <div class="row align-items-center">
                 <div class="col-md-8">
-                  <h4 class="page-title m-0"> Generate Request</h4>
+                  <h4 class="page-title m-0"> Add Service Engineer</h4>
                 </div>
               </div>
             </div>
@@ -314,30 +314,44 @@
             <div class="col-12">
                 <div class="card m-b-30">
                     <div class="card-body">
-                        <h4 class="mt-0 header-title">Create A Request</h4>
+                        <h4 class="mt-0 header-title">Add Service Engineer</h4>
                         <div class="m-3">
                             <div class="row">
                                 <div class="col-lg-4">
                                     <div class="p-20">
                                         
                                             <div class="form-group">
-                                                <label for="customer-name">Customer Name</label>
+                                                <label for="customer-name"> Engineer Name</label>
                                                 <input class="form-control" type="text" value="" 
-                                                 id="customer-name" placeholder="Enter Customer Name">   
+                                                   placeholder="Enter Engineer Name">   
                                             </div> 
                                             <div class="form-group">
-                                                <label>Select Device</label>
+                                                <label>Select Experience</label>
                                                 <select class="form-control">
                                                     <option>Select</option>
-                                                    <option>Laptop</option>
-                                                    <option>Desktop</option>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                    <option>6</option>
+                                                    <option>7</option>
+                                                    <option>8</option>
+                                                    <option>9</option>
+                                                    <option>10</option>
                                                 </select>   
-                                            </div>  
+                                            </div>    
                                             <div class="form-group">
-                                                <label>Serial Number</label>
-                                                <input class="form-control" type="text" value="" 
-                                                    placeholder="Enter Serial number">   
-                                            </div>      
+                                                <label>Select Expertise</label>
+                                                <select class="form-control">
+                                                    <option>Select</option>
+                                                    <option>Network Security</option>
+                                                    <option>WLAN/LAN</option>
+                                                    <option>Technical Support</option>
+                                                    <option>Network Configuration</option>
+                                                    <option>Hardware development</option>                                                </select>   
+                                            </div>   
+                                            
                                         
                                     </div>
                                 </div>
@@ -350,18 +364,15 @@
                                                  id="mobile-number" placeholder="Enter Mobile Number">   
                                             </div>  
                                             <div class="form-group">
-                                                <label>Select Brand</label>
-                                                <select class="form-control">
-                                                    <option>Select</option>
-                                                    <option>HCL</option>
-                                                    <option>D-Link</option>
-                                                </select>   
-                                            </div> 
+                                                <label>Personal Documents</label>
+                                                <input class="form-control" type="file" value="" 
+                                                  placeholder="Upload File">
+                                            </div>
                                             <div class="form-group">
-                                                <label>Item Number</label>
-                                                <input class="form-control" type="text" value="" 
-                                                    placeholder="Enter Item number">   
-                                            </div>        
+                                                <label>Address</label>
+                                                    <textarea class="form-control" placeholder="Enter Address">  
+                                                    </textarea>
+                                            </div>  
                                         
                                     </div>
                                 </div>
@@ -374,46 +385,18 @@
                                                  id="email-id" placeholder="Enter Email ID">   
                                             </div>
                                             <div class="form-group">
-                                                <label for="model">Select Model</label>
-                                                    <select id="model" class="form-control">
-                                                        <option>Select</option>
-                                                        <option>Model 1</option>
-                                                        <option>Model 2</option>
-                                                    </select> 
-                                            </div> 
-                                            <div class="form-group">
-                                                <label>Pincode</label>
-                                                <input class="form-control" type="text" value="" 
-                                                    placeholder="Enter Pin Code">   
-                                            </div>         
+                                                <label>Experience Documents</label>
+                                                <input class="form-control" type="file" value="" 
+                                                  placeholder="Upload File">
+                                            </div>          
                                         
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="p-20">
-                                        <div class="form-group">
-                                            <label>Address</label>
-                                                <textarea class="form-control" placeholder="Enter Address">  
-                                                </textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="p-20">
-                                        <div class="form-group">
-                                            <label>Issue/Problem in Details</label>
-                                                <textarea class="form-control" placeholder="Enter Issue in Detail">  
-                                                </textarea>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12">
                                     <div class="p-20 text-center">
-                                        <button class="btn btn-primary">Submit</button>
+                                        <button class="btn btn-primary">Add</button>
                                     </div>
     
                                 </div>
@@ -425,6 +408,143 @@
         </div>
 
         <!-- End Form-->
+         <!--Table to show added service engineer-->
+         <div class="row">
+            <div class="col-xl-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="mt-0 header-title mb-4">Service Engineer Management</h4>
+                  
+                  <div class="table-responsive">
+                    <table id="service-engineer-table" class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th scope="col">ID</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Expertise</th>
+                          <th scope="col">Experience</th>
+                          <th scope="col">No of Service</th>
+                          <th scope="col">View in Detail</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Nani </td>
+                            <td>Network Security</td>
+                            <td>4</td>
+                            <td>10 </td>
+                            <td>
+                                <a href="service-engineer-view.html">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Sandhya </td>
+                            <td>WLAN/LAN</td>
+                            <td>2</td>
+                            <td>7 </td>
+                            <td>
+                                <a href="service-engineer-view.html">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Nani </td>
+                            <td>Network Security</td>
+                            <td>4</td>
+                            <td>10 </td>
+                            <td>
+                                <a href="service-engineer-view.html">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Sandhya </td>
+                            <td>WLAN/LAN</td>
+                            <td>2</td>
+                            <td>7 </td>
+                            <td>
+                                <a href="service-engineer-view.html">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Nani </td>
+                            <td>Network Security</td>
+                            <td>4</td>
+                            <td>10 </td>
+                            <td>
+                                <a href="service-engineer-view.html">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Sandhya </td>
+                            <td>WLAN/LAN</td>
+                            <td>2</td>
+                            <td>7 </td>
+                            <td>
+                                <a href="service-engineer-view.html">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Nani </td>
+                            <td>Network Security</td>
+                            <td>4</td>
+                            <td>10 </td>
+                            <td>
+                                <a href="service-engineer-view.html">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Sandhya </td>
+                            <td>WLAN/LAN</td>
+                            <td>2</td>
+                            <td>7 </td>
+                            <td>
+                                <a href="service-engineer-view.html">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Nani </td>
+                            <td>Network Security</td>
+                            <td>4</td>
+                            <td>10 </td>
+                            <td>
+                                <a href="service-engineer-view.html">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Sandhya </td>
+                            <td>WLAN/LAN</td>
+                            <td>2</td>
+                            <td>7 </td>
+                            <td>
+                                <a href="service-engineer-view.html">View</a>
+                            </td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        <!--End Table-->
         <!-- end row -->
       </div>
       <!-- end container-fluid -->
@@ -452,8 +572,13 @@
     <script src="assets/js/coordinator-dashboard.int.js"></script>
     <!-- App js -->
     <script src="assets/js/app.js"></script>
-    <script>$(document).ready(function () {
-        $('form').parsley();
-    });</script>
+    <script type="text/javascript" src="assets/js/datatables.min.js"></script>
+    <script>
+        $("document").ready(function () {
+    
+          $("#service-engineer-table").dataTable({
+          });
+        });
+      </script>
   </body>
 </html>
